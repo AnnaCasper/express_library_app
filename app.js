@@ -6,6 +6,8 @@ bodyParser = require("body-parser");
 var morgan = require('morgan');
 app.use(morgan('tiny'));
 
+db = require('./models')
+
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended:true}));
